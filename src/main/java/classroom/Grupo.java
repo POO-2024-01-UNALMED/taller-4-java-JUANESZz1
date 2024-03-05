@@ -33,16 +33,20 @@ public class Grupo {
     }
 
     void cambiarEstudiante(Persona estudianteViejo, Persona estudianteNuevo) {
-        for (int i = 0; i < estudiantes.length; i++) {
-            if (estudiantes[i].getCedula() == estudianteViejo.getCedula()) {
-                estudiantes[i] = estudianteNuevo;
-                break;
+        if (estudianteViejo != null) {
+            for (int i = 0; i < estudiantes.length; i++) {
+                if (estudiantes[i] != null && estudiantes[i].getCedula() == estudianteViejo.getCedula()) {
+                    estudiantes[i] = estudianteNuevo;
+                    break;
+                }
             }
         }
     }
 
     void cambiarEstudiante(int indice, Persona estudiante) {
-        estudiantes[indice] = estudiante;
+        if (indice >= 0 && indice < estudiantes.length) {
+            estudiantes[indice] = estudiante;
+        }
     }
 }
 
