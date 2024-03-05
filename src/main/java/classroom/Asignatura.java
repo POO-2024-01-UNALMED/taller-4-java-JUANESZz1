@@ -1,5 +1,5 @@
 package classroom;
-
+this(0);
 public class Asignatura {
 
     public String nombre;
@@ -10,7 +10,7 @@ public class Asignatura {
 
     public Asignatura() {
         this("Sin nombre",Tipo.FUNDAMENTACION);
-        this(0);
+        ;
     }
 
     public Asignatura(int codigoInterno,Tipo tipo) {
